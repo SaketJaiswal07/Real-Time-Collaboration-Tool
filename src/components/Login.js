@@ -42,7 +42,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
+    <div className="container">
       <h2 class="Logintxt mb-3 fw-normal">Login </h2>
       <form onSubmit={handleLogin}>
         <div className="mb-3">
