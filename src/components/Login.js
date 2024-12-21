@@ -43,7 +43,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
+      <h2 class="Logintxt mb-3 fw-normal">Login </h2>
       <form onSubmit={handleLogin}>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
@@ -53,6 +53,7 @@ const Login = () => {
             type="email"
             className="form-control"
             id="email"
+            placeholder="example@email.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -66,18 +67,23 @@ const Login = () => {
             type="password"
             className="form-control"
             id="password"
+            placeholder="********"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button
+          type="submit"
+          className="btn btn-primary pd-3 lp-5 mt-3 mb-3 rp-5"
+        >
           Login
         </button>
       </form>
-      {error && <p className="text-danger mt-3">{error}</p>}{" "}
+      {error && <p className="text-danger mt-5 pt-5 ">{error}</p>}{" "}
+      <p>Don't have an account</p>
       <p>
-        Don't have an account? <a href="/register">Register</a>
+        <a href="/register">Register</a>
       </p>
     </div>
   );
